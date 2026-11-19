@@ -1,6 +1,6 @@
 
 import { useEffect, useState } from 'react';
-import { ActivityIndicator, FlatList, Image, Text, View } from 'react-native';
+import { ActivityIndicator, FlatList, Image, StyleSheet, Text, View } from 'react-native';
 
 const API=`https://www.themealdb.com/api/json/v1/1/categories.php`;
 
@@ -22,11 +22,7 @@ export default function App(){
   },[]);
 
   return(
-    <View style={{ flex: 1,
-    paddingTop: 40,
-    paddingHorizontal: 20,
-    backgroundColor: '#fff'
-    }}>
+    <View style={styles.container}>
       <Text style={{ fontSize: 25, marginBottom: 15 }}>
         Meal Categories
 
@@ -42,12 +38,7 @@ export default function App(){
 
 
         renderItem={({item})=>
-         <View style={{flexDirection:'row',
-                       alignItems:'center',
-                       paddingVertical: 12,
-                       borderBottomWidth: 1,
-                       borderBottomColor: '#852929',
-                       gap: 14}}> 
+         <View style={styles.row}> 
               <Image
                    source={{ uri: item.strCategoryThumb }}
                    style={{ width: 80, height: 80,borderRadius: 8 }}
@@ -80,3 +71,24 @@ export default function App(){
   );
 }
 
+const styles = StyleSheet.create({
+  container:{
+    flex: 1,
+    paddingTop: 40,
+    paddingHorizontal: 20,
+    backgroundColor: '#fff',
+  },
+
+  row:{
+    flexDirection:'row',
+                       alignItems:'center',
+                       paddingVertical: 12,
+                       borderBottomWidth: 1,
+                       borderBottomColor: '#852929',
+                       gap: 14,
+  },
+
+
+
+
+});
