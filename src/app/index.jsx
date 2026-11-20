@@ -61,8 +61,8 @@ export default function App() {
       flexDirection: 'row',
       alignItems: 'center',
       paddingVertical: 12,
-      borderBottomWidth: 1,
-      borderBottomColor: '#852929',
+      // borderBottomWidth: 1,
+      // borderBottomColor: '#852929',
       gap: 14
     }}
   >
@@ -77,7 +77,7 @@ export default function App() {
               fontSize: 20,
               // padding: 15,
               // borderBottomWidth: 1,
-              borderColor: '#852929',
+              // borderColor: '#852929',
               textAlignVertical: 'center'
             }}>
 

@@ -12,6 +12,10 @@ export default function RootLayout() {
         name="category"
         options={{ title: 'Meals' }}
       />
+      <Stack.Screen
+      name="mealpage"
+      options={{title:'Meals Details'}}
+      />
     </Stack>
   );
 }
